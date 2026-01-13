@@ -1,0 +1,17 @@
+[
+    {
+        "origin": [
+            "http://localhost:5173",
+            "https://portfolio-8fba4.web.app",
+            "https://portfolio-8fba4.firebaseapp.com"
+        ],
+        "method": [
+            "GET",
+            "PUT",
+            "POST",
+            "DELETE",
+            "HEAD"
+        ],
+        "maxAgeSeconds": 3600
+    }
+]
