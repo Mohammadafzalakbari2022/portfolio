@@ -112,3 +112,16 @@ dist
 .yarn/build-state.yml
 .yarn/install-state.gz
 .pnp.*
+
+# JSON/Secrets Protection
+*.json
+!package.json
+!package-lock.json
+!tsconfig.json
+!firebase.json
+!cors.json
+
+# Explicitly ignore any service account keys
+*-firebase-adminsdk-*.json
+FIREBASE_SERVICE_ACCOUNT_*.json
+service-account-*.json

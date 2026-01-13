@@ -1,4 +1,5 @@
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
+import { ThemeProvider } from './context/ThemeContext'
 import Layout from './components/Layout'
 import Home from './pages/Home'
 
@@ -20,19 +21,21 @@ const Placeholder = ({ title }) => (
 
 function App() {
     return (
-        <BrowserRouter>
-            <Routes>
-                <Route path="/" element={<Layout />}>
-                    <Route index element={<Home />} />
-                    <Route path="about" element={<About />} />
-                    <Route path="projects" element={<Projects />} />
-                    <Route path="pricing" element={<Pricing />} />
-                    <Route path="contact" element={<Contact />} />
-                    <Route path="login" element={<Login />} />
-                    <Route path="admin" element={<Admin />} />
-                </Route>
-            </Routes>
-        </BrowserRouter>
+        <ThemeProvider defaultTheme="dark" storageKey="vite-ui-theme">
+            <BrowserRouter>
+                <Routes>
+                    <Route path="/" element={<Layout />}>
+                        <Route index element={<Home />} />
+                        <Route path="about" element={<About />} />
+                        <Route path="projects" element={<Projects />} />
+                        <Route path="pricing" element={<Pricing />} />
+                        <Route path="contact" element={<Contact />} />
+                        <Route path="login" element={<Login />} />
+                        <Route path="admin" element={<Admin />} />
+                    </Route>
+                </Routes>
+            </BrowserRouter>
+        </ThemeProvider>
     )
 }
 

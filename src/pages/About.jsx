@@ -38,7 +38,7 @@ function About() {
             </section>
 
             <section className="workflow-section">
-                <h2>How I Work</h2>
+                <h2 className="section-title">How I Work</h2>
                 <div className="workflow-grid">
                     {workflow.map((item, index) => (
                         <div key={index} className="workflow-card">
